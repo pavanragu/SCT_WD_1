@@ -1,9 +1,6 @@
-// ---- NAVBAR: Change style on scroll ----
-
-window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
-
-    // Add 'scrolled' class when user scrolls down more than 50px
+// navbar scroll effect
+window.addEventListener("scroll", function() {
+    var navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {
@@ -12,40 +9,35 @@ window.addEventListener("scroll", function () {
 });
 
 
-// ---- HAMBURGER MENU: Toggle mobile nav ----
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", function () {
+// hamburger menu toggle
+document.getElementById("hamburger").addEventListener("click", function() {
+    var navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("open");
 });
 
-// Close menu when a nav link is clicked
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
+// close nav when a link is clicked (for mobile)
+var allLinks = document.querySelectorAll(".nav-links a");
+for (var i = 0; i < allLinks.length; i++) {
+    allLinks[i].addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("open");
     });
-});
+}
 
 
-// ---- CONTACT FORM: Basic form submit handler ----
-
-const contactForm = document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function (e) {
+// contact form
+document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var msg = document.getElementById("message").value;
 
-    if (name && email && message) {
-        document.getElementById("formMessage").textContent = "Thank you, " + name + "! Your message has been sent.";
-        contactForm.reset();
+    if (name == "" || email == "" || msg == "") {
+        document.getElementById("successMsg").textContent = "Please fill all the fields.";
+        document.getElementById("successMsg").style.color = "red";
     } else {
-        document.getElementById("formMessage").textContent = "Please fill in all fields.";
+        document.getElementById("successMsg").textContent = "Message sent! We will get back to you soon.";
+        document.getElementById("successMsg").style.color = "green";
+        document.getElementById("contactForm").reset();
     }
 });
