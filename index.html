@@ -8,76 +8,76 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-        <div class="logo">SkillCraft Technology</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+<!-- navbar -->
+<nav id="navbar">
+    <div class="logo">SkillCraft Technology</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to <span>SkillCraft Technology</span></h1>
-            <p>Learn new skills, grow your career, and build the future you want.</p>
-            <a href="#courses" class="btn">Explore Courses</a>
-        </div>
-    </section>
+<!-- hero / home section -->
+<section id="home">
+    <div class="hero-text">
+        <h1>Welcome to <span class="highlight">SkillCraft Technology</span></h1>
+        <p>Learn new skills and grow your career with our online courses.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+    </div>
+</section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
+    <!-- courses -->
+<section id="courses">
         <h2>Our Courses</h2>
-        <div class="course-cards">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Learn HTML, CSS, and JavaScript to build modern websites from scratch.</p>
-                <a href="#" class="btn">Enroll Now</a>
-            </div>
-            <div class="card">
-                <h3>Data Science</h3>
-                <p>Understand data analysis, Python, and machine learning basics.</p>
-                <a href="#" class="btn">Enroll Now</a>
-            </div>
-            <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Design beautiful and user-friendly interfaces with Figma and more.</p>
-                <a href="#" class="btn">Enroll Now</a>
-            </div>
+    <div class="cards-container">
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript to build websites from scratch.</p>
+            <a href="#" class="btn">Enroll Now</a>
         </div>
-    </section>
+        <div class="card">
+            <h3>Data Science</h3>
+            <p>Learn python and data analysis basics and also machine learning.</p>
+            <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="card">
+                <h3>UI/UX Design</h3>
+            <p>Design good looking interfaces using Figma and other tools.</p>
+            <a href="#" class="btn">Enroll Now</a>
+        </div>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>SkillCraft Technology is an online learning platform that helps students and professionals gain real-world skills through practical, project-based courses. We believe learning should be accessible to everyone.</p>
-    </section>
+<!-- about section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>SkillCraft Technology is a platform for learning tech skills online. We focus on practical learning so students can get jobs faster. Our courses are made by industry experts.</p>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <p id="formMessage"></p>
-    </section>
+<!-- contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+        <button type="submit" class="btn">Send</button>
+    </form>
+    <p id="successMsg"></p>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 SkillCraft Technology. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>copyright 2024 SkillCraft Technology</p>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
